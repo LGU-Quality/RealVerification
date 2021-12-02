@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RealVerification.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>8</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>7FAA04D3EA9F28DF15FAD3B9DC47838566090BCD</string>
+				<key>dateExpires</key>
+				<string>2022/11/08</string>
+				<key>type</key>
+				<string>Cloud Managed Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>N326LKZZKF.com.deviceprocess.RealVerification</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>N326LKZZKF</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>N326LKZZKF.com.deviceprocess.RealVerification</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>RealVerification.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>6ff8fcd8-bf13-443a-856e-ea70873437a7</string>
+				<key>dateExpires</key>
+				<string>2022/11/08</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: com.deviceprocess.RealVerification</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>N326LKZZKF</string>
+				<key>name</key>
+				<string>seyong park</string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0.5</string>
+		</dict>
+	</array>
+</dict>
+</plist>
