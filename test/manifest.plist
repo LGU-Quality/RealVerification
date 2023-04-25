@@ -29,7 +29,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.deviceprocess.RealVerification</string>
+				<string>com.lguplus.RealVerification</string>
 				<key>bundle-version</key>
 				<string>1.0.5</string>
 				<key>kind</key>
