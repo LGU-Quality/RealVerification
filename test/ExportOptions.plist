@@ -3,26 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>compileBitcode</key>
-	<true/>
+	<false/>
 	<key>destination</key>
 	<string>export</string>
-	<key>manifest</key>
-	<dict>
-		<key>appURL</key>
-		<string>https://lgu-quality.github.io/RealVerification/test/app_icon.jpeg</string>
-		<key>displayImageURL</key>
-		<string>https://lgu-quality.github.io/RealVerification/test/app_icon.jpeg</string>
-		<key>fullSizeImageURL</key>
-		<string>https://lgu-quality.github.io/RealVerification/test/app_icon.jpeg</string>
-	</dict>
 	<key>method</key>
-	<string>ad-hoc</string>
+	<string>enterprise</string>
 	<key>signingStyle</key>
 	<string>automatic</string>
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
-	<string>N326LKZZKF</string>
+	<string>Y3X76MKKP6</string>
 	<key>thinning</key>
 	<string>&lt;none&gt;</string>
 </dict>
