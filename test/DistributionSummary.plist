@@ -10,7 +10,7 @@
 				<string>arm64</string>
 			</array>
 			<key>buildNumber</key>
-			<string>104</string>
+			<string>111</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
@@ -48,7 +48,7 @@
 				<string>LG Uplus Corp.</string>
 			</dict>
 			<key>versionNumber</key>
-			<string>1.0.4</string>
+			<string>1.1.1</string>
 		</dict>
 	</array>
 </dict>
