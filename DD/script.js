@@ -5,7 +5,7 @@ const tableHeaders = ['No', '타입', '구분', '모델', '가번', 'MAC', '사�
 // Function to load CSV data and build the initial table
 function loadTableData() {
   // Fetch the CSV file
-  Papa.parse('test.csv', {
+  Papa.parse('silsa_0706.csv', {
     download: true,
     header: true,
     skipEmptyLines: true,
