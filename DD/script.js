@@ -1,28 +1,37 @@
 // Global variables
 let tableData = []; // To store the CSV data
+let filteredData = []; // To store the filtered data after performing search
 const tableHeaders = ['No', '타입', '구분', '모델', '가번', 'MAC', '사용자', '끝번호', '실사결과', '비고'];
+let sortColumn = ''; // 정렬 기준 컬럼
+let sortDirection = ''; // 정렬 방향
 
 // Function to load CSV data and build the initial table
 function loadTableData() {
-  // Fetch the CSV file
-  Papa.parse('silsa_0706.csv', {
-    download: true,
-    header: true,
-    skipEmptyLines: true,
-    complete: function (results) {
-      // Save the parsed CSV data to the tableData variable
-      tableData = results.data;
+  // CSV 파일을 가져옵니다.
+  fetch('silsa_0706.csv')
+    .then(response => response.text())
+    .then(data => {
+      // CSV 데이터를 파싱합니다.
+      const parsedData = Papa.parse(data, { header: true, skipEmptyLines: true });
 
-      // Build the initial table
+      // 파싱된 CSV 데이터를 tableData 변수에 저장합니다.
+      tableData = parsedData.data;
+
+      // 초기 테이블을 생성합니다.
       buildTable();
-    }
-  });
+    })
+    .catch(error => {
+      console.error('CSV 파일을 로드하는 중 오류가 발생했습니다:', error);
+    });
 }
 
 // Function to build the initial table
 function buildTable() {
   // Get the table container element
   const tableContainer = document.getElementById('tableContainer');
+
+  // Remove the existing table
+  tableContainer.innerHTML = '';
 
   // Create the table element
   const table = document.createElement('table');
@@ -36,12 +45,10 @@ function buildTable() {
     const headerCell = document.createElement('th');
     headerCell.textContent = headerText;
 
-    if (headerText === '사용자') {
-      headerCell.style.minwidth = '150px'; // '사용자' 칼럼의 너비
-    } else if (headerText === '끝번호') {
-      headerCell.style.minwidth = '150px'; // '끝번호' 칼럼의 너비
-    }
-    headerCell.style.whiteSpace = 'nowrap';
+    // 컬럼 헤더 클릭 이벤트를 추가합니다.
+    headerCell.addEventListener('click', function() {
+      sortTable(headerText);
+    });
 
     headerRow.appendChild(headerCell);
   });
@@ -64,8 +71,6 @@ function buildTable() {
       row.appendChild(cell);
     });
 
-    
-
     // Apply styling to rows with '실사결과' as '완료'
     if (rowData['실사결과'] === '완료') {
       row.classList.add('completed');
@@ -79,6 +84,13 @@ function buildTable() {
 
   // Append the table to the table container
   tableContainer.appendChild(table);
+
+  // 정렬 기준 컬럼과 방향 초기화
+  sortColumn = '';
+  sortDirection = '';
+
+  // 컬럼 헤더 클릭 이벤트를 추가합니다.
+  addHeaderClickEvent();
 }
 
 // Function to handle the search button click
@@ -87,15 +99,18 @@ function performSearch() {
   const searchUser = document.getElementById('searchUser').value.trim().toLowerCase();
   const searchEndNumber = document.getElementById('searchEndNumber').value.trim().toLowerCase();
 
+  // Clear the table container
+  tableContainer.innerHTML = '';
+
   // Filter the table data based on the search values
-  const searchResults = tableData.filter(rowData => {
+  filteredData = tableData.filter(rowData => {
     const userMatch = rowData['사용자'].toLowerCase().includes(searchUser);
     const endNumberMatch = rowData['끝번호'].toLowerCase().includes(searchEndNumber);
     return userMatch && endNumberMatch;
   });
 
   // Rebuild the table with the search results
-  buildTableFromData(searchResults);
+  buildTableFromData(filteredData);
 }
 
 // Function to build the table with data
@@ -134,6 +149,7 @@ function buildTableFromData(data) {
     tableHeaders.forEach(headerText => {
       const cell = document.createElement('td');
       cell.textContent = rowData[headerText];
+      cell.style.whiteSpace = 'nowrap';
       row.appendChild(cell);
     });
 
@@ -150,12 +166,69 @@ function buildTableFromData(data) {
 
   // Append the table to the table container
   tableContainer.appendChild(table);
+
+  // 컬럼 헤더 클릭 이벤트를 추가합니다.
+  addHeaderClickEvent();
 }
 
 // Function to handle the search button click
 function handleSearchButtonClick() {
   performSearch();
 }
+
+// 컬럼 헤더 클릭 이벤트를 추가하는 함수
+function addHeaderClickEvent() {
+  const headerCells = document.querySelectorAll('th');
+
+  headerCells.forEach((headerCell, index) => {
+    headerCell.addEventListener('click', () => {
+      sortTable(index); // 컬럼의 인덱스 값을 전달하여 정렬 수행
+    });
+  });
+}
+
+// 테이블 정렬을 수행하는 함수
+function sortTable(column) {
+  // 현재 정렬 기준 컬럼과 방향을 업데이트합니다.
+  if (sortColumn === column) {
+    // 현재 컬럼과 같은 경우 방향을 반대로 변경합니다.
+    sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+  } else {
+    // 현재 컬럼과 다른 경우 오름차순으로 설정합니다.
+    sortColumn = column;
+    sortDirection = 'asc';
+  }
+
+  // 정렬을 수행할 대상 데이터를 설정합니다.
+  const targetData = filteredData.length > 0 ? filteredData : tableData;
+
+  // 대상 데이터를 정렬합니다.
+  targetData.sort((a, b) => {
+    const columnTextA = String(a[tableHeaders[sortColumn]]).toLowerCase();
+    const columnTextB = String(b[tableHeaders[sortColumn]]).toLowerCase();
+
+    if (sortDirection === 'asc') {
+      return columnTextA.localeCompare(columnTextB);
+    } else {
+      return columnTextB.localeCompare(columnTextA);
+    }
+  });
+
+  // 테이블을 다시 빌드합니다.
+  buildTableFromData(targetData);
+
+  // 정렬 방향에 따라 헤더 셀에 클래스를 추가합니다.
+  const headerCells = document.querySelectorAll('th');
+  headerCells.forEach((headerCell, index) => {
+    if (index === sortColumn) {
+      headerCell.classList.remove('asc', 'desc');
+      headerCell.classList.add(sortDirection === 'asc' ? 'asc' : 'desc');
+    } else {
+      headerCell.classList.remove('asc', 'desc');
+    }
+  });
+}
+
 
 // Event listener for the search button click
 const searchButton = document.getElementById('searchButton');
