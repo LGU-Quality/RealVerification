@@ -8,17 +8,25 @@
 </head>
 <body>
     <h1>실사용 검증단 시료 실사</h1>
-        <label for="searchInput">검색어:</label>
+        <!-- <label for="searchInput">검색어:</label>
         <input type="text" id="searchInput" placeholder="검색어를 입력하세요...">
-        <button onclick="searchTable()">검색</button>
-        <h6>성함 혹은 전화번호 뒤 4자리 등. </h6>
-        <h6>이름 '홍길동' 검색 → '홍*동' 입력, 전화번호 '1234' 검색 → '123*' 입력 </h6>
+        <button onclick="searchTable()">검색</button> -->
+        <label for="searchUser">사용자:</label>
+        <input type="text" id="searchUser">
+        <label for="searchResult">끝번호:</label>
+        <input type="text" id="searchResult">
+        <button id="searchButton">Search</button>
+        <button onclick="performSearch()">검색</button>
+        <button onclick="loadTableData()">새로고침</button>
+    </div>
+        <h6>사용자 '홍길동' 검색 → '홍*동' 입력, 전화번호 '1234' 검색 → '123*' 입력 </h6>
         <h5>검색하는데 다소 시간이 소요됩니다!</h5>
-    <div id="table-container"></div>
+    <div id="tableContainer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="worker.js"></script>
     <script src="script.js"></script>
-    <script>
+    <!-- <script>
         // index.html 파일에서 스크립트 로드 시 웹 워커 생성
         document.addEventListener("DOMContentLoaded", () => {
             // CSV 파일 읽기 및 표로 표현하기
@@ -29,6 +37,6 @@
                 }
             });
         });
-    </script>
+    </script> -->
 </body>
 </html>
