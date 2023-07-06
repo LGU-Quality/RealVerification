@@ -133,6 +133,7 @@ function buildTableFromData(data) {
   tableHeaders.forEach(headerText => {
     const headerCell = document.createElement('th');
     headerCell.textContent = headerText;
+    headerCell.style.whiteSpace = 'nowrap';
     headerRow.appendChild(headerCell);
   });
 
