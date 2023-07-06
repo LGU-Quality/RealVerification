@@ -44,7 +44,8 @@ function buildTable() {
   tableHeaders.forEach(headerText => {
     const headerCell = document.createElement('th');
     headerCell.textContent = headerText;
-
+    headerCell.style.whiteSpace = 'nowrap';
+    
     // 컬럼 헤더 클릭 이벤트를 추가합니다.
     headerCell.addEventListener('click', function() {
       sortTable(headerText);
