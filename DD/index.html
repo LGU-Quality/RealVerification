@@ -11,16 +11,16 @@
         <!-- <label for="searchInput">검색어:</label>
         <input type="text" id="searchInput" placeholder="검색어를 입력하세요...">
         <button onclick="searchTable()">검색</button> -->
-        <label for="searchUser">사용자:</label>
+        <label for="searchUser">사용자 검색:</label>
         <input type="text" id="searchUser">
-        <label for="searchResult">끝번호:</label>
-        <input type="text" id="searchResult">
-        <button id="searchButton">Search</button>
-        <button onclick="performSearch()">검색</button>
-        <button onclick="loadTableData()">새로고침</button>
+
+        <label for="searchEndNumber">끝번호 검색:</label>
+        <input type="text" id="searchEndNumber">
+
+        <button id="searchButton">검색</button>
     </div>
-        <h6>사용자 '홍길동' 검색 → '홍*동' 입력, 전화번호 '1234' 검색 → '123*' 입력 </h6>
-        <h5>검색하는데 다소 시간이 소요됩니다!</h5>
+        <h6>사용자 '홍길동' 검색 → '홍*동' 입력. 전화번호 '1234' 검색 → '123*' 입력 </h6>
+        <h5>검색하는데 다소 시간이 소요될 수 있습니다!</h5>
     <div id="tableContainer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
