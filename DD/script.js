@@ -98,15 +98,24 @@ function buildTable() {
 function performSearch() {
   // Get the search values
   const searchUser = document.getElementById('searchUser').value.trim().toLowerCase();
+  const tempUser = searchUser.replace(/^(.)(.)/, function(match, firstChar, secondChar) {
+    return firstChar + "*";
+  });
+
+  console.log(searchUser);
+  console.log(tempUser);
   const searchEndNumber = document.getElementById('searchEndNumber').value.trim().toLowerCase();
+  const tempNumber = searchEndNumber.toString().replace(/.$/, "*");
+  console.log(searchEndNumber);
+  console.log(tempNumber);
 
   // Clear the table container
   tableContainer.innerHTML = '';
 
   // Filter the table data based on the search values
   filteredData = tableData.filter(rowData => {
-    const userMatch = rowData['사용자'].toLowerCase().includes(searchUser);
-    const endNumberMatch = rowData['끝번호'].toLowerCase().includes(searchEndNumber);
+    const userMatch = rowData['사용자'].toLowerCase().includes(tempUser);
+    const endNumberMatch = rowData['끝번호'].toLowerCase().includes(tempNumber);
     return userMatch && endNumberMatch;
   });
 
