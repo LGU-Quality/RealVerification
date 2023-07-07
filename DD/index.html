@@ -9,7 +9,7 @@
 <body>
     <div>
         <h1>실사용 검증단 시료 실사 </h1> 
-        <h2>(7월 7일 11시 기준)</h2>
+        <h2>(7월 7일 14시 기준)</h2>
         <h4><b>모든 시료 확인 완료 인원 : 16 명</b></h4>
     </div>
     
@@ -34,8 +34,6 @@
     <h5 style="text-align: right; color:red; font-weight: bold; margin-top: 5px; margin-bottom: 20px;">
          * 검색하는데 다소 시간이 소요될 수 있습니다!</h5>
     
-    
-    <!-- <h6 style="margin-top: 20px;">사용자 '홍길동' 검색 → '홍*동' 입력. 전화번호 끝 네자리 '1234' 검색 → '123*' 입력 </h6> -->
     <div class="SEARCH">
         <div>
             <label for="searchUser">사용자 검색:</label>
@@ -54,19 +52,6 @@
     <div id="tableContainer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <!-- <script src="worker.js"></script> -->
     <script src="script.js"></script>
-    <!-- <script>
-        // index.html 파일에서 스크립트 로드 시 웹 워커 생성
-        document.addEventListener("DOMContentLoaded", () => {
-            // CSV 파일 읽기 및 표로 표현하기
-            Papa.parse("your_csv_file.csv", {
-                download: true,
-                complete: function (results) {
-                    displayCSVAsTable(results.data);
-                }
-            });
-        });
-    </script> -->
 </body>
 </html>
