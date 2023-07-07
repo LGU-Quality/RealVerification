@@ -101,6 +101,10 @@ th.desc::after {
 content: ' ▼';
 }
 
+input[type="text"] {
+    width: 80px;
+}
+
 /* tr:nth-child(even) {
     background-color: #f2f2f2;
 } */
