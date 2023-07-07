@@ -67,8 +67,19 @@ function buildTable() {
 
     tableHeaders.forEach(headerText => {
       const cell = document.createElement('td');
-      cell.textContent = rowData[headerText];
+      // cell.textContent = rowData[headerText] || '&nbsp;'; // 빈 문자열인 경우 공백으로 설정
       cell.style.whiteSpace = 'nowrap';
+
+      if (rowData[headerText] === '0') {
+        cell.innerHTML = '&nbsp;'; // HTML 공백 문자열로 설정
+      } else {
+        cell.textContent = rowData[headerText];
+      }
+
+      if (headerText === '비고') {
+        cell.style.textAlign = 'left';
+      }
+
       row.appendChild(cell);
     });
 
@@ -92,35 +103,6 @@ function buildTable() {
 
   // 컬럼 헤더 클릭 이벤트를 추가합니다.
   addHeaderClickEvent();
-}
-
-// Function to handle the search button click
-function performSearch() {
-  // Get the search values
-  const searchUser = document.getElementById('searchUser').value.trim().toLowerCase();
-  const tempUser = searchUser.replace(/^(.)(.)/, function(match, firstChar, secondChar) {
-    return firstChar + "*";
-  });
-
-  console.log(searchUser);
-  console.log(tempUser);
-  const searchEndNumber = document.getElementById('searchEndNumber').value.trim().toLowerCase();
-  const tempNumber = searchEndNumber.toString().replace(/.$/, "*");
-  console.log(searchEndNumber);
-  console.log(tempNumber);
-
-  // Clear the table container
-  tableContainer.innerHTML = '';
-
-  // Filter the table data based on the search values
-  filteredData = tableData.filter(rowData => {
-    const userMatch = rowData['사용자'].toLowerCase().includes(tempUser);
-    const endNumberMatch = rowData['끝번호'].toLowerCase().includes(tempNumber);
-    return userMatch && endNumberMatch;
-  });
-
-  // Rebuild the table with the search results
-  buildTableFromData(filteredData);
 }
 
 // Function to build the table with data
@@ -159,8 +141,19 @@ function buildTableFromData(data) {
 
     tableHeaders.forEach(headerText => {
       const cell = document.createElement('td');
-      cell.textContent = rowData[headerText];
+      // cell.textContent = rowData[headerText] || ' '; // 빈 문자열인 경우 공백으로 설정
       cell.style.whiteSpace = 'nowrap';
+
+      if (rowData[headerText] === '0') {
+        cell.innerHTML = '&nbsp;'; // HTML 공백 문자열로 설정
+      } else {
+        cell.textContent = rowData[headerText];
+      }
+
+      if (headerText === '비고') {
+        cell.style.textAlign = 'left';
+      }
+
       row.appendChild(cell);
     });
 
@@ -180,6 +173,33 @@ function buildTableFromData(data) {
 
   // 컬럼 헤더 클릭 이벤트를 추가합니다.
   addHeaderClickEvent();
+}
+
+// Function to handle the search button click
+function performSearch() {
+  // Get the search values
+  const searchUser = document.getElementById('searchUser').value.trim().toLowerCase();
+  const tempUser = searchUser.replace(/^(.)(.)/, function(match, firstChar, secondChar) {
+    return firstChar + "*";
+  });
+
+  const searchEndNumber = document.getElementById('searchEndNumber').value.trim().toLowerCase();
+  const tempNumber = searchEndNumber.toString().replace(/.$/, "*");
+
+  console.log("이름 입력 값: %s, 검색 값: %s, 번호 입력 값: %s, 검색 값: %s", searchUser, tempUser, searchEndNumber, tempNumber);
+
+  // Clear the table container
+  tableContainer.innerHTML = '';
+
+  // Filter the table data based on the search values
+  filteredData = tableData.filter(rowData => {
+    const userMatch = rowData['사용자'].toLowerCase().includes(tempUser);
+    const endNumberMatch = rowData['끝번호'].toLowerCase().includes(tempNumber);
+    return userMatch && endNumberMatch;
+  });
+
+  // Rebuild the table with the search results
+  buildTableFromData(filteredData);
 }
 
 // Function to handle the search button click
@@ -239,7 +259,6 @@ function sortTable(column) {
     }
   });
 }
-
 
 // Event listener for the search button click
 const searchButton = document.getElementById('searchButton');
