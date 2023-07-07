@@ -7,28 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>실사용 검증단 시료 실사 (7월 6일 17시 기준) </h1>
-    <h5>모든 시료 확인 완료 인원 : 12명 </h5>
-    
-    <h6> MAC 주소가 숫자로 되어 있는 부분은 IoT 패키지의 실사용자 여부를 확인하기 위한 것으로, 해당 가번 중 어느 한 시료라도 사용중일 경우 완료처리 됩니다. </h6>
-    <h6> 시료를 분실하셨다면 저에게 꼭 알려주세요. 부정사용을 막기 위하여 해지처리 진행 예정입니다! (IoT 패키지 단말 중 일부가 분실된 경우에는 해지 없이 지속 사용)</h6>
-    <h4> UHD4T, UHD4K 사용자의 경우 실제 MAC과 다른 경우가 많습니다 ㅜ</h4>
-    <h4> ★ UHD4K 사용자의 경우 리모컨의 [지우기][지우기][0][0][한영특][한영특] 버튼을 순차적으로 눌러 히든메뉴 진입 </br>
-        → 0.자가진단 → 1.시스템 정보 내 표시된 가입자번호, MAC Address를 촬영하여 전송 부탁드립니다. ★</h4>
-    <h6>검색하는데 다소 시간이 소요될 수 있습니다!</h6>
-    
-    <!-- <h6 style="margin-top: 20px;">사용자 '홍길동' 검색 → '홍*동' 입력. 전화번호 끝 네자리 '1234' 검색 → '123*' 입력 </h6> -->
     <div>
-        <label for="searchUser">사용자 검색:</label>
-        <input type="text" id="searchUser">
-
-        <label for="searchEndNumber">전화번호 끝 4자리 검색:</label>
-        <input type="text" id="searchEndNumber">
-
-        <button id="searchButton">검색</button>
+        <h1>실사용 검증단 시료 실사 </h1> 
+        <h2>(7월 6일 17시 기준)</h2>
+        <h4><b>모든 시료 확인 완료 인원 : 12명</b></h4>
+    </div>
+    
+    <div class="GRAY">
+        <h5> MAC 주소가 숫자로 되어 있는 부분은 IoT 패키지의 실사용자 여부를 확인하기 위한 것으로, 해당 가번 중 어느 한 시료라도 사용중일 경우 완료처리 됩니다. </h5>
+        <h5> <mark class ="HL"> 시료를 분실하셨다면 저에게 꼭 알려주세요. </mark>
+            </br> 부정사용을 막기 위하여 해지처리 진행 예정입니다! 
+            </br> (IoT 패키지 단말 중 일부가 분실된 경우에는 해지 없이 지속 사용)</h5>
     </div>
 
-    <h6>칼럼명을 눌러서 오름차순/내림차순 정렬이 가능합니다.</h6>
+    <div style="margin-top: 20px">
+        <h3> UHD4T, UHD4K 사용자의 경우 실제 MAC과 다른 경우가 많습니다.</h3>
+    </div>
+
+    <div class="GRAY">
+        <h5> <mark class="HL">UHD4K 사용자의 경우</mark> </h5>
+        <h5> <mark class ="HL">①</mark>
+             &nbsp;리모컨의 <strong>[지우기][지우기][0][0][한영특][한영특]</strong>버튼을 순차적으로 눌러 히든메뉴 진입 </b> </h5>
+        <h5><mark class ="HL">②</mark>&nbsp;0.자가진단</h5>
+        <h5><mark class ="HL">③</mark>&nbsp;1.시스템 정보 내 표시된 가입자번호와 MAC Address를 촬영하여 전송 부탁드립니다.</h5>
+    </div>
+
+    <h5 style="text-align: right; color:red; font-weight: bold; margin-top: 5px; margin-bottom: 20px;">
+         * 검색하는데 다소 시간이 소요될 수 있습니다!</h5>
+    
+    
+    <!-- <h6 style="margin-top: 20px;">사용자 '홍길동' 검색 → '홍*동' 입력. 전화번호 끝 네자리 '1234' 검색 → '123*' 입력 </h6> -->
+    <div class="SEARCH">
+        <div>
+            <label for="searchUser">사용자 검색:</label>
+            <input type="text" id="searchUser">
+        </div>
+        <div style="margin-top: 8px;">
+            <label for="searchEndNumber">전화번호 끝 4자리 검색:</label>
+            <input type="text" id="searchEndNumber">
+
+            <button id="searchButton">검색</button>
+        </div>
+    </div>
+
+    <h5 style="margin-left: 13px;">칼럼명을 누르면 오름차순/내림차순 정렬이 가능합니다.</h5>
 
     <div id="tableContainer"></div>
 
