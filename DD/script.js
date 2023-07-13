@@ -107,10 +107,15 @@ function buildTable() {
   // '사용자'별로 '실사결과' 값이 모두 '완료'인 수 추출
   const completedUsers = {};
   const totalUsers = {};
+  const userNumbers = {};
+  const userNames = {};
   tableData.forEach(rowData => {
     const user = rowData['사용자']+rowData['끝번호'];
     const result = rowData['실사결과'];
-    if ((result === '완료') || (result === '추가확인필요')) {
+    const number = rowData['끝번호'];
+    const name = rowData['사용자'];
+    // if ((result === '완료') || (result === '추가확인필요')) {
+    if (result === '완료') {
       if (completedUsers[user]) {
         completedUsers[user]++;
       } else {
@@ -122,23 +127,41 @@ function buildTable() {
     } else {
       totalUsers[user] = 1;
     }
+    if (!userNumbers[user]) { userNumbers[user] = number; }
+    if (!userNames[user]) { userNames[user] = name; }
   });
 
-  var temp=0;
+  var completedCnt=0;
+  var completedUser = '';
+  console.log(completedUsers);
+
   // 전체 사용자별 항목 수 대비 완료된 항목 수가 같은 경우 숫자 출력
   const sortedUsers = Object.keys(completedUsers).sort(); // 사용자 이름 오름차순 정렬
-  sortedUsers.forEach(user => {
+  sortedUsers.forEach((user, index) => {
     const completedCount = completedUsers[user];
     const totalCount = totalUsers[user];
+    const userNumber = userNumbers[user];
+    const userName = userNames[user];
     if (completedCount === totalCount) {
       console.log(`사용자 ${user}: ${completedCount}`);
-      temp++;
+      console.log(userName);
+      if (userName && userNumber) {
+        completedUser += `${userName}(${userNumber})`;
+        if (index !== sortedUsers.length - 1) {
+          completedUser += ', ';
+        }
+      }
+      completedCnt++;
     }
   });
 
+
   // '모든 시료 확인 완료 인원' 업데이트
   const completedCountElement = document.getElementById('completedCount');
-  completedCountElement.textContent = temp;
+  completedCountElement.textContent = completedCnt;
+
+  const completedUserElement = document.getElementById('completedUser');
+  completedUserElement.textContent = completedUser;
 }
 
 
