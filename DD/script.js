@@ -103,7 +103,44 @@ function buildTable() {
 
   // 컬럼 헤더 클릭 이벤트를 추가합니다.
   addHeaderClickEvent();
+
+  // '사용자'별로 '실사결과' 값이 모두 '완료'인 수 추출
+  const completedUsers = {};
+  const totalUsers = {};
+  tableData.forEach(rowData => {
+    const user = rowData['사용자']+rowData['끝번호'];
+    const result = rowData['실사결과'];
+    if ((result === '완료') || (result === '추가확인필요')) {
+      if (completedUsers[user]) {
+        completedUsers[user]++;
+      } else {
+        completedUsers[user] = 1;
+      }
+    }
+    if (totalUsers[user]) {
+      totalUsers[user]++;
+    } else {
+      totalUsers[user] = 1;
+    }
+  });
+
+  var temp=0;
+  // 전체 사용자별 항목 수 대비 완료된 항목 수가 같은 경우 숫자 출력
+  const sortedUsers = Object.keys(completedUsers).sort(); // 사용자 이름 오름차순 정렬
+  sortedUsers.forEach(user => {
+    const completedCount = completedUsers[user];
+    const totalCount = totalUsers[user];
+    if (completedCount === totalCount) {
+      console.log(`사용자 ${user}: ${completedCount}`);
+      temp++;
+    }
+  });
+
+  // '모든 시료 확인 완료 인원' 업데이트
+  const completedCountElement = document.getElementById('completedCount');
+  completedCountElement.textContent = temp;
 }
+
 
 // Function to build the table with data
 function buildTableFromData(data) {
