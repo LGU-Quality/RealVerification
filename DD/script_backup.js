@@ -8,7 +8,7 @@ let sortDirection = ''; // 정렬 방향
 // Function to load CSV data and build the initial table
 function loadTableData() {
   // CSV 파일을 가져옵니다.
-  fetch('silsa.csv')
+  fetch('silsa_backup_0717.csv')
     .then(response => response.text())
     .then(data => {
       // CSV 데이터를 파싱합니다.
