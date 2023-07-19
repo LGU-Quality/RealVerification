@@ -133,7 +133,7 @@ function buildTable() {
 
   var completedCnt=0;
   var completedUser = '';
-  console.log(completedUsers);
+  // console.log(completedUsers);
 
   // 전체 사용자별 항목 수 대비 완료된 항목 수가 같은 경우 숫자 출력
   const sortedUsers = Object.keys(completedUsers).sort(); // 사용자 이름 오름차순 정렬
@@ -143,8 +143,8 @@ function buildTable() {
     const userNumber = userNumbers[user];
     const userName = userNames[user];
     if (completedCount === totalCount) {
-      console.log(`사용자 ${user}: ${completedCount}`);
-      console.log(userName);
+      // console.log(`사용자 ${user}: ${completedCount}`);
+      // console.log(userName);
       if (userName && userNumber) {
         completedUser += `${userName}(${userNumber})`;
         if (index !== sortedUsers.length - 1) {
@@ -251,15 +251,32 @@ function performSearch() {
   // Clear the table container
   tableContainer.innerHTML = '';
 
+  let notColmpletedCnt = 0;
   // Filter the table data based on the search values
   filteredData = tableData.filter(rowData => {
     const userMatch = rowData['사용자'].toLowerCase().includes(tempUser);
     const endNumberMatch = rowData['끝번호'].toLowerCase().includes(tempNumber);
+    const resultMatch = rowData['실사결과'].toLowerCase() === '완료';
+    if (userMatch && endNumberMatch && !resultMatch){notColmpletedCnt++;}
     return userMatch && endNumberMatch;
   });
 
+  // let notColmpltedCnt = 0;
+  // let notColmpletedData = filteredData.filter(rowData => {
+  //   const resultMatch = rowData['실사결과'].toLowerCase() === '완료';
+  //   console.log(resultMatch);
+  //   if (!resultMatch) {notColmpltedCnt++;}
+  // });
+
   // Rebuild the table with the search results
   buildTableFromData(filteredData);
+
+  const completedUserElement = document.getElementById('userDetail');
+  if (notColmpletedCnt ==0){
+    completedUserElement.textContent = searchUser+'('+searchEndNumber+') 님은 실사가 완료되셨습니다.';
+  } else {
+    completedUserElement.innerHTML = `${tempUser}(${tempNumber}) 님은 <span style="color: red">${notColmpletedCnt} 개 시료 추가 확인</span>이 필요합니다.`;
+  }
 }
 
 // Function to handle the search button click
