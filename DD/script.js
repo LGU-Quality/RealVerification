@@ -261,21 +261,13 @@ function performSearch() {
     return userMatch && endNumberMatch;
   });
 
-  // let notColmpltedCnt = 0;
-  // let notColmpletedData = filteredData.filter(rowData => {
-  //   const resultMatch = rowData['실사결과'].toLowerCase() === '완료';
-  //   console.log(resultMatch);
-  //   if (!resultMatch) {notColmpltedCnt++;}
-  // });
-
-  // Rebuild the table with the search results
   buildTableFromData(filteredData);
 
   const completedUserElement = document.getElementById('userDetail');
   if (notColmpletedCnt ==0){
     completedUserElement.textContent = searchUser+'('+searchEndNumber+') 님은 실사가 완료되셨습니다.';
   } else {
-    completedUserElement.innerHTML = `${tempUser}(${tempNumber}) 님은 <span style="color: red">${notColmpletedCnt} 개 시료 추가 확인</span>이 필요합니다.`;
+    completedUserElement.innerHTML = `${tempUser}(${tempNumber}) 님은 <span style="color: red">${notColmpletedCnt} 개 시료 추가 확인</span>이 필요합니다. - 단말이 분실되었을 경우 알려주시면 완료처리 진행하도록 하겠습니다.`;
   }
 }
 
