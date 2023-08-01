@@ -12,7 +12,11 @@
         <h2>(8월 1일 11시 기준)</h2>
         <h4 style="margin-bottom: 5px;"><b>모든 시료 확인 완료 인원 : 
             <span id="completedCount"></span> 명</b> 
-            [ <span id ="completedUser"></span> ]
+             <span id ="completedUser"></span> 
+        </h4> 
+        <h4 style="margin-bottom: 5px; margin-top: 0px;"><b>추가 확인 필요 인원 : 
+            <span id="notcompletedCount"></span> 명</b> 
+            [ <span id ="notcompletedUser"></span> ]
         </h4> 
         <h5 style="margin-top: 5px;">※ 시료 Number Ordering이 변경되었습니다.</h5>
     </div>
@@ -61,6 +65,9 @@
     <div id="tableContainer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
-    <script src="script.js"></script>
+    <script src="papaparse.min.js"></script>
+    <script src="script_.js"></script>
+    <script id="worker-script" type="worker-script"></script>
+    <script src="worker.js"></script>
 </body>
 </html>
