@@ -1,7 +1,7 @@
 // Global variables
 let tableData = [];
 let filteredData = [];
-const tableHeaders = ['No', '타입', '구분', '모델', '가번', 'MAC', '사용자', '끝번호', '실사결과', '비고'];
+const tableHeaders = ['No', '타입', '모델', '가번', 'MAC', '사용자', '끝번호', '구분', '실사결과', '비고'];
 let sortColumn = '';
 let sortDirection = '';
 const pageSize = 50;
@@ -434,8 +434,14 @@ function handleSearchButtonClick() {
 const searchButton = document.getElementById('searchButton');
 searchButton.addEventListener('click', handleSearchButtonClick);
 
+const completedUserElement = document.getElementById('userDetail');
+completedUserElement.textContent = "이름 혹은 전화번호로 검색해 주세요.";
+completedUserElement.innerHTML = `<span style="color: red">이름 혹은 전화번호로 검색해 주세요.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  - 단말이 분실되었을 경우 알려주시면 완료처리 진행하도록 하겠습니다.`;
+
 // Load the table data on page load
 loadTableData().then(() => {
   // 검색 필드의 입력 이벤트에 반응하지 않도록 수정
   // window.addEventListener('scroll', handleLazyLoad);
+  
 });
