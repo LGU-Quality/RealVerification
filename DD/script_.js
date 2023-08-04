@@ -3,7 +3,6 @@ let tableData = [];
 let filteredData = [];
 const tableHeaders = ['No', '타입', '모델', '가번', 'MAC', '사용자', '끝번호', '구분', '실사결과', '비고'];
 let sortColumn = '';
-let sortDirection = '';
 const pageSize = 50;
 let currentPage = 1;
 let isDataLoaded = false;
@@ -47,40 +46,46 @@ function handlePagination() {
 
 // Function to load CSV data and build the initial table
 function loadTableData() {
-  const csvUrl = 'silsa.csv';
-  const workerScript = `
-    ${papaParseWorker}
-    // Add your custom worker code here
-  `;
+  return new Promise((resolve, reject) => {
+    const csvUrl = 'silsa.csv';
+    const workerScript = `
+      ${papaParseWorker}
+      // Add your custom worker code here
+    `;
 
-  // Create a Blob URL for the web worker script
-  const workerBlob = new Blob([workerScript], { type: 'application/javascript' });
-  const workerScriptUrl = URL.createObjectURL(workerBlob);
+    // Create a Blob URL for the web worker script
+    const workerBlob = new Blob([workerScript], { type: 'application/javascript' });
+    const workerScriptUrl = URL.createObjectURL(workerBlob);
 
-  // Create a web worker
-  const worker = new Worker(workerScriptUrl);
+    // Create a web worker
+    const worker = new Worker(workerScriptUrl);
 
-  // Load the CSV data using the web worker
-  fetch(csvUrl)
-    .then(response => response.text())
-    .then(data => {
-      worker.postMessage(data);
-    })
-    .catch(error => {
-      console.error('CSV 파일을 로드하는 중 오류가 발생했습니다:', error);
-    });
+    // Load the CSV data using the web worker
+    fetch(csvUrl)
+      .then(response => response.text())
+      .then(data => {
+        worker.postMessage(data);
+      })
+      .catch(error => {
+        console.error('CSV 파일을 로드하는 중 오류가 발생했습니다:', error);
+        reject(error);
+      });
 
-  // Handle messages from the web worker
-  worker.onmessage = function (event) {
-    const parsedData = event.data;
-    tableData = parsedData.data;
+    // Handle messages from the web worker
+    worker.onmessage = function (event) {
+      const parsedData = event.data;
+      tableData = parsedData.data;
+      // console.log(tableData);
 
-    // Build the table with the loaded data
-    buildTable();
+      // Build the table with the loaded data
+      buildTable();
 
-    // Enable pagination and lazy loading
-    // window.addEventListener('scroll', handleLazyLoad);
-  };
+      // Enable pagination and lazy loading
+      // window.addEventListener('scroll', handleLazyLoad);
+
+      resolve(); // 로드가 완료되었음을 알려주기 위해 프로미스를 성공(resolve) 상태로 변경
+    };
+  });
 }
 
 // Function to build the initial table
@@ -90,6 +95,15 @@ function buildTable() {
 
   // Remove the existing table
   tableContainer.innerHTML = '';
+
+  // console.log(tableData);
+  if (tableData.length === 0) {
+    // If tableData is empty, show a message or take appropriate action
+    const message = document.createElement('p');
+    message.textContent = '데이터가 없습니다.'; // You can customize this message
+    tableContainer.appendChild(message);
+    return; // Exit the function, as there is no data to build the table
+  }
 
   // Create the table element
   const table = document.createElement('table');
@@ -357,7 +371,7 @@ function performSearch() {
 
   buildTableFromData(filteredData);
 
-  console.log(notCompletedCnt);
+  // console.log(notCompletedCnt);
   const completedUserElement = document.getElementById('userDetail');
   if (notCompletedCnt === 0) {
     completedUserElement.textContent = searchUser + '(' + searchEndNumber + ') 님은 실사가 완료되셨습니다.';
