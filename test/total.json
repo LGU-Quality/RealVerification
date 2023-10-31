@@ -2,129 +2,123 @@
 	"data": [
 		{
 			"id": 1,
-			"script": "박찬욱 영화를 검색했어요.",
+			"script": "도움이 된 거 같아 기뻐요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/1.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/1.wav"
 		},
 		{
 			"id": 2,
-			"script": "의천도룡기를 검색했어요.",
+			"script": "영화 삼백을 검색했어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/2.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/2.wav"
 		},
 		{
 			"id": 3,
-			"script": "무한도전 최신화를 검색했어요.",
+			"script": "요청하신 내용을 검색했어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/3.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/3.wav"
 		},
 		{
 			"id": 4,
-			"script": "갱스 오브 뉴욕을 검색했어요.",
+			"script": "박찬욱 영화를 검색했어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/4.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/4.wav"
 		},
 		{
 			"id": 5,
-			"script": "개미는 오늘도 뚠뚠을 검색했어요.",
+			"script": "좋은 밤 되세요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/5.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/5.wav"
 		},
 		{
 			"id": 6,
-			"script": "개는 훌륭하다를 검색했어요.",
+			"script": "편안한 시간 보내세요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/6.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/6.wav"
 		},
 		{
 			"id": 7,
-			"script": "스트리트 우먼 파이터를 검색했어요.",
+			"script": "죄송해요. 잘 모르겠어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/7.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/7.wav"
 		},
 		{
 			"id": 8,
-			"script": "가디언즈 오브 갤럭시를 검색했어요.",
+			"script": "츰파카는 말레이시아에서 제출한 태풍의 이름이었지.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/8.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/8.wav"
 		},
 		{
 			"id": 9,
-			"script": "해리포터와 불의 잔을 검색했어요.",
+			"script": "범죄도시 쓰리를 검색했어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/9.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/9.wav"
 		},
 		{
 			"id": 10,
-			"script": "반지의 제왕 두개의 탑을 검색했어요.",
+			"script": "날씨는 제가 알기 어려워요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/10.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/10.wav"
 		},
 		{
 			"id": 11,
-			"script": "요청하신 내용을 검색했어요.",
+			"script": "압둘라 귈은 튀르키예의 제 십일 대 대통령이래.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/11.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/11.wav"
 		},
 		{
 			"id": 12,
-			"script": "제가 더 도움이 될 수 있도록 노력할게요.",
+			"script": "아직 알지 못하는 부분은 더 공부해올게요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/12.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/12.wav"
 		},
 		{
 			"id": 13,
-			"script": "어려운 요청이네요. 다른 도움을 드릴 순 없을까요?",
+			"script": "호찌민의 껨박당은 코코넛 아이스크림으로 유명하지?",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/13.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/13.wav"
 		},
 		{
 			"id": 14,
-			"script": "도움이 된 것 같아 기뻐요.",
+			"script": "스파츌라는 어디에서 팔고 있는지 알아?",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/14.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/14.wav"
 		},
 		{
 			"id": 15,
-			"script": "오싹오싹 무서운 영화를 알려드릴게요.",
+			"script": "그건 제가 할 수 없는 일이 에요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/15.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/15.wav"
 		},
 		{
 			"id": 16,
-			"script": "압꾸정을 검색했어요.",
+			"script": "티비에 대해 도움을 드릴 수 있어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/16.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/16.wav"
 		},
 		{
 			"id": 17,
-			"script": "이태원클라쓰를 검색했어요.",
+			"script": "먀오리현은 타이완섬 북서부에 위치한 현이다.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/17.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/17.wav"
 		},
 		{
 			"id": 18,
-			"script": "메가로돈 투를 검색했어요.",
+			"script": "놀면뭐하니 시즌투를 검색했어요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/18.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/18.wav"
 		},
 		{
 			"id": 19,
-			"script": "범죄도시 쓰리를 검색했어요.",
+			"script": "편안한 시간 보내세요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/19.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/19.wav"
 		},
 		{
 			"id": 20,
-			"script": "존윅포를 검색했어요.",
+			"script": "깨끗하게 한다는 것은 기분 좋은 일이에요.",
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/20.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/20.wav"
-		},
-		{
-			"id": 21,
-			"script": "놀면뭐하니 십일회를 검색했어요",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/21.wav",
-			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/21.wav"
 		}
 	]
 }
