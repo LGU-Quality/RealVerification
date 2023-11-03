@@ -120,5 +120,11 @@
 			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/20.wav",
 			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/20.wav"
 		}
+		{
+			"id": 21,
+			"script": "",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/21.wav",
+			"compare_url": "http://180.228.85.50:7779/static/upload/익시도우미/compare_1/21.wav"
+		}
 	]
 }
