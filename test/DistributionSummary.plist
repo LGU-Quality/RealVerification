@@ -10,13 +10,13 @@
 				<string>arm64</string>
 			</array>
 			<key>buildNumber</key>
-			<string>111</string>
+			<string>114</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
 				<string>D70142AD14DE9CA3EB0B07EA8B33953B0CE5EFC4</string>
 				<key>dateExpires</key>
-				<string>2024/11/10</string>
+				<string>11/10/24</string>
 				<key>type</key>
 				<string>Cloud Managed iOS Distribution</string>
 			</dict>
@@ -34,9 +34,9 @@
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>e91066e6-b33e-427b-8f1b-5caa8679c8f9</string>
+				<string>6bfc122c-6d84-43b0-9e99-616a64be36fd</string>
 				<key>dateExpires</key>
-				<string>2024/04/24</string>
+				<string>2/1/25</string>
 				<key>name</key>
 				<string>iOS Team Inhouse Provisioning Profile: com.lguplus.RealVerification</string>
 			</dict>
@@ -48,7 +48,7 @@
 				<string>LG Uplus Corp.</string>
 			</dict>
 			<key>versionNumber</key>
-			<string>1.1.1</string>
+			<string>1.1.4</string>
 		</dict>
 	</array>
 </dict>
