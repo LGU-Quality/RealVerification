@@ -2,13 +2,13 @@
 	"data": [
 		{
 			"id": 1,
-			"script": "Test: 사운드바블랙2 검증 1차 설문지",
+			"script": "사바블랙2 검증1차_미션#1_설문지(완료)",
 			"isFinished": "Y",
 			"url": "https://forms.gle/huTZJuG8xApfyyB57"
 		},
 		{
 			"id": 2,
-			"script": "Test",
+			"script": "사바블랙2 검증1차_미션#2_공지",
 			"isFinished": "Y",
 			"url": "https://drive.google.com/file/d/1SBNWq8_7qx1IRsO0pyyfmA48CSsgVXbE/view?usp=drive_link"
 		}
