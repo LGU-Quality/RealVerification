@@ -2,63 +2,16 @@
 	"data": [
 		{
 			"id": 1,
-			"script": "000 조사(~0/0)",
+			"script": "Test: 사운드바블랙2 검증 1차 설문지",
 			"isFinished": "Y",
-			"url": "http://www.google.com"
+			"url": "https://forms.gle/huTZJuG8xApfyyB57"
 		},
 		{
 			"id": 2,
-			"script": "하하",
-			"isFinished": "Y",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 3,
-			"script": "테스트3",
-			"isFinished": "Y",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 4,
-			"script": "테스트4",
-			"isFinished": "Y",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 5,
-			"script": "테스트5",
-			"isFinished": "Y",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 6,
-			"script": "테스트6",
-			"isFinished": "N",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 7,
-			"script": "김원경",
-			"isFinished": "N",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 8,
-			"script": "곽세희와",
-			"isFinished": "Y",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 9,
-			"script": "함께하는",
-			"isFinished": "N",
-			"url": "http://www.google.com"
-		},
-		{
-			"id": 10,
-			"script": "앱 개편",
+			"script": "Test",
 			"isFinished": "Y",
 			"url": "http://www.google.com"
 		}
+	
 	]
 }
