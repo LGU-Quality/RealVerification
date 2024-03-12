@@ -4,61 +4,61 @@
 			"id": 1,
 			"script": "000 조사(~0/0)",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/1.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/1.wav"
 		},
 		{
 			"id": 2,
 			"script": "하하",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/2.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/2.wav"
 		},
 		{
 			"id": 3,
 			"script": "테스트3",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/3.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/3.wav"
 		},
 		{
 			"id": 4,
 			"script": "테스트4",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/4.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/4.wav"
 		},
 		{
 			"id": 5,
 			"script": "테스트5",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/5.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/5.wav"
 		},
 		{
 			"id": 6,
 			"script": "테스트6",
 			"is_finished": "N",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/6.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/6.wav"
 		},
 		{
 			"id": 7,
 			"script": "김원경",
 			"is_finished": "N",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/7.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/7.wav"
 		},
 		{
 			"id": 8,
 			"script": "곽세희와",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/8.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/8.wav"
 		},
 		{
 			"id": 9,
 			"script": "함께하는",
 			"is_finished": "N",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/9.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/9.wav"
 		},
 		{
 			"id": 10,
 			"script": "앱 개편",
 			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/10.wav",
+			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/10.wav"
 		}
 	]
 }
