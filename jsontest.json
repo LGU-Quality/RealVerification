@@ -3,62 +3,62 @@
 		{
 			"id": 1,
 			"script": "000 조사(~0/0)",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/1.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 2,
 			"script": "하하",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/2.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 3,
 			"script": "테스트3",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/3.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 4,
 			"script": "테스트4",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/4.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 5,
 			"script": "테스트5",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/5.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 6,
 			"script": "테스트6",
-			"is_finished": "N",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/6.wav"
+			"isFinished": "N",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 7,
 			"script": "김원경",
-			"is_finished": "N",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/7.wav"
+			"isFinished": "N",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 8,
 			"script": "곽세희와",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/8.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 9,
 			"script": "함께하는",
-			"is_finished": "N",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/9.wav"
+			"isFinished": "N",
+			"url": "http://www.google.com"
 		},
 		{
 			"id": 10,
 			"script": "앱 개편",
-			"is_finished": "Y",
-			"target_url": "http://180.228.85.50:7779/static/upload/익시도우미/target/10.wav"
+			"isFinished": "Y",
+			"url": "http://www.google.com"
 		}
 	]
 }
