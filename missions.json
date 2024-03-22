@@ -1,20 +1,20 @@
 {
 	"data": [
-{
+                {
 			"id": 1,
-			"script": "통합검색 미션 확인하기",
+			"script": "1통합검색 미션 확인하기",
 			"isFinished": "N",
 			"url": "https://drive.google.com/file/d/1w_33AiExh01GWuSXobxF1Gm17mh48Yj9/view?usp=sharing"
 		},
 		{
 			"id": 2,
-			"script": "통합검색 미션1 설문지",
+			"script": "2통합검색 설문지 - 미션1",
 			"isFinished": "N",
 			"url": "https://forms.gle/nKhGKe3n3HFjvP1b7"
 		},
 		{
 			"id": 3,
-			"script": "통합검색 미션3 설문지",
+			"script": "3통합검색 설문지 - 미션3",
 			"isFinished": "N",
 			"url": "https://forms.gle/D8BTKnpk7f93W2GQA"
 		},
