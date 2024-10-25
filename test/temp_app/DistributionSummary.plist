@@ -10,15 +10,15 @@
 				<string>arm64</string>
 			</array>
 			<key>buildNumber</key>
-			<string>130</string>
+			<string>132</string>
 			<key>certificate</key>
 			<dict>
 				<key>SHA1</key>
-				<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+				<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 				<key>dateExpires</key>
-				<string>1/2/25</string>
+				<string>2/15/26</string>
 				<key>type</key>
-				<string>Apple Development</string>
+				<string>iOS Distribution</string>
 			</dict>
 			<key>embeddedBinaries</key>
 			<array>
@@ -32,11 +32,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>App.framework</string>
@@ -60,11 +60,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>Flutter.framework</string>
@@ -88,11 +88,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>image_picker_ios.framework</string>
@@ -116,11 +116,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>libwebp.framework</string>
@@ -144,11 +144,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>package_info_plus.framework</string>
@@ -172,11 +172,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>path_provider_foundation.framework</string>
@@ -200,11 +200,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>shared_preferences_foundation.framework</string>
@@ -228,11 +228,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>url_launcher_ios.framework</string>
@@ -256,11 +256,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>video_player_avfoundation.framework</string>
@@ -284,11 +284,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>video_thumbnail.framework</string>
@@ -312,11 +312,11 @@
 					<key>certificate</key>
 					<dict>
 						<key>SHA1</key>
-						<string>B91ACF2FDF8535BA1D497A48186A6ADBFA275782</string>
+						<string>F061683B2E1CCAAEE59B5E5DD57320700884F9B4</string>
 						<key>dateExpires</key>
-						<string>1/2/25</string>
+						<string>2/15/26</string>
 						<key>type</key>
-						<string>Apple Development</string>
+						<string>iOS Distribution</string>
 					</dict>
 					<key>name</key>
 					<string>webview_flutter_wkwebview.framework</string>
@@ -335,21 +335,23 @@
 			<dict>
 				<key>application-identifier</key>
 				<string>J9W7JJ7925.com.lguplus.RealVerification</string>
+				<key>aps-environment</key>
+				<string>production</string>
 				<key>com.apple.developer.team-identifier</key>
 				<string>Y3X76MKKP6</string>
 				<key>get-task-allow</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>name</key>
 			<string>Runner.app</string>
 			<key>profile</key>
 			<dict>
 				<key>UUID</key>
-				<string>e66ebe0a-fd75-4439-9eae-09d5f2c542eb</string>
+				<string>dbc374b9-1fb6-4f3d-9184-d04b31e63dec</string>
 				<key>dateExpires</key>
-				<string>5/23/25</string>
+				<string>5/24/25</string>
 				<key>name</key>
-				<string>iOS Team Provisioning Profile: com.lguplus.RealVerification</string>
+				<string>iOS Team Inhouse Provisioning Profile: com.lguplus.RealVerification</string>
 			</dict>
 			<key>team</key>
 			<dict>
@@ -359,7 +361,7 @@
 				<string>LG Uplus Corp.</string>
 			</dict>
 			<key>versionNumber</key>
-			<string>1.3.0</string>
+			<string>1.3.2</string>
 		</dict>
 	</array>
 </dict>
